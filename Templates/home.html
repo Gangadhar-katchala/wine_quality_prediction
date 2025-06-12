@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Prediction</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="login border p-4 rounded shadow">
+            <h1 class="text-center mb-4">Wine Quality Prediction</h1>
+
+            <form action="{{ url_for('predict_datapoint') }}" method="post">
+                <fieldset>
+                    <legend>Enter Wine Features</legend>
+
+                    <div class="mb-3">
+                        <label class="form-label">Fixed Acidity</label>
+                        <input class="form-control" type="number" step="any" name="fixed_acidity" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Volatile Acidity</label>
+                        <input class="form-control" type="number" step="any" name="volatile_acidity" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Citric Acid</label>
+                        <input class="form-control" type="number" step="any" name="citric_acid" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Residual Sugar</label>
+                        <input class="form-control" type="number" step="any" name="residual_sugar" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Chlorides</label>
+                        <input class="form-control" type="number" step="any" name="chlorides" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Free Sulfur Dioxide</label>
+                        <input class="form-control" type="number" step="any" name="free_sulfur_dioxide" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Total Sulfur Dioxide</label>
+                        <input class="form-control" type="number" step="any" name="total_sulfur_dioxide" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Density</label>
+                        <input class="form-control" type="number" step="any" name="density" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">pH</label>
+                        <input class="form-control" type="number" step="any" name="pH" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sulphates</label>
+                        <input class="form-control" type="number" step="any" name="sulphates" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Alcohol</label>
+                        <input class="form-control" type="number" step="any" name="alcohol" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Color</label>
+                        <select class="form-control" name="color" required>
+                            <option selected disabled value="">Select Color</option>
+                            <option value="red">Red</option>
+                            <option value="white">White</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <input class="btn btn-primary" type="submit" value="Predict Wine Quality" />
+                    </div>
+                </fieldset>
+            </form>
+
+            {% if results is defined %}
+                <div class="alert alert-info text-center mt-4" role="alert">
+                    <h2>The prediction is: <strong>{{ results }}</strong></h2>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

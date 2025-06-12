@@ -1,0 +1,17 @@
+pandas
+matplotlib
+numpy
+scikit-learn
+seaborn
+joblib
+scipy
+statsmodels
+pip
+ipykernel
+termcolor
+xgboost
+jinja2
+flask
+
+
+ 

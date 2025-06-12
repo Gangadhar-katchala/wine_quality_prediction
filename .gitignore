@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+wine_quality/
+.venv/
+venv/
+ENV/
+
+# Logs
+logs/
+*.log
+
+# Model artifacts
+artifacts/
+*.pkl
+*.h5
+*.model
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# System
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+*.local.yaml
+
+# Data
+notebooks/data/
+*.csv
+*.xlsx
+*.xls
+
+# Documentation
+docs/_build/
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+
+# Package management
+uv.lock
+pyproject.toml
