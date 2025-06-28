@@ -42,10 +42,10 @@ This project builds and deploys a machine learning pipeline to classify wine qua
 | medium  | 0.87      | 0.96   | 0.91     |
 
 **Model Comparison:**
-![Model Comparison](notebooks/model_comparison.png)
+![Model Comparison](notebooks/images/model_comparison.png)
 
 **Confusion Matrix and Classification Report:**
-![Confusion Matrix and Classification Report](notebooks/confusion_matrix_report.png)
+![Confusion Matrix and Classification Report](notebooks/images/confusion_matrix_report.png)
 
 ---
 
